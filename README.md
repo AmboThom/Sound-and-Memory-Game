@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![lightdemo.gif]lightdemo.gif
+![lightdemo.gif](lightdemo.gif)
 
 
 ## Reflection Questions
@@ -61,7 +61,7 @@ If I had more time with this project, I would add certain features to give the u
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://drive.google.com/file/d/1eas2dE3lT693LyczzJRRwiJk989Zlm96/view?usp=sharing)
 
 
 ## License
