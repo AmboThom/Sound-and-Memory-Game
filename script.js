@@ -84,15 +84,6 @@ function playClueSequence(){
   }
 }
 
-function guess(btn){
-  console.log("user guessed: " + btn);
-  if(!gamePlaying){
-    return;
-  }
-  
-  // add game logic here
-}
-
 function loseGame(){
   stopGame();
   alert("Game Over. You lost.");
@@ -106,6 +97,35 @@ function stopTone(){
   g.gain.setTargetAtTime(0,context.currentTime + 0.05,0.025);
   tonePlaying = false;
 }
+
+function guess(btn){
+  console.log("user guessed: " + btn);
+  
+  if(!gamePlaying){
+    return;
+  }
+  
+  if(pattern[guessCounter] == btn){
+    //Guess was correct!
+    if(guessCounter == progress){
+      if(progress == pattern.length - 1){
+        //GAME OVER: WIN!
+        winGame();
+      }else{
+        //Pattern correct. Add next segment
+        progress++;
+        playClueSequence();
+      }
+    }else{
+      //so far so good... check the next guess
+      guessCounter++;
+    }
+  }else{
+    //Guess was incorrect
+    //GAME OVER: LOSE!
+    loseGame();
+  }
+} 
 
 // Page Initialization
 // Init Sound Synthesizer
